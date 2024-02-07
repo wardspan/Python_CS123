@@ -10,6 +10,12 @@
 
 ### General Python Code
 - temp_convert
+- age_classifier
+- area_rectangle
+- book_club
+- number-compare
+- shipping_charges
+- software_sales
 
 ### ToDo
 - write descriptions of what each program does
