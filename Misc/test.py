@@ -16,3 +16,17 @@ elif ranks[0] in '23456789' and ranks[1] in '23456789':
         bonus_points += 70
     elif abs(int(ranks[0]) - int(ranks[1])) == 1 and suits[0] != suits[1]:
         bonus_points += 50
+
+        elif ranks[0] in "10JQKA" and ranks[1] in "10JQKA":
+
+    # elif ((ranks[0],ranks[1]) or (ranks[1],ranks[0]) in ranks_string)
+    # and suits[0] == suits[1]:
+    # bonus_points += 70
+    # elif ((ranks[0],ranks[1]) or (ranks[1],ranks[0]) in ranks_string)
+    # and suits[0] != suits[1]:
+    # bonus_points += 50
+
+    if 'a' in '10JQKA':
+        print("Variable 'a' found!")
+    else:
+        print("Variable 'a' not found.")
