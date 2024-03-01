@@ -56,24 +56,18 @@ def calculate_bonus_points(cards):
     """
     bonus_points = 0
     ranks = [card[0] for card in cards]
-    #   ranks_string = ''.join(ranks)
     suits = [card[1] for card in cards]
 
     if ranks[0] == ranks[1]:
         bonus_points += 100
-    elif ranks[0] in "23456789" and ranks[1] in "23456789":
-        if abs(int(ranks[0]) - int(ranks[1])) == 1 and suits[0] == suits[1]:
-            bonus_points += 70
-        elif abs(int(ranks[0]) - int(ranks[1])) == 1 and suits[0] != suits[1]:
-            bonus_points += 50
-
-    # elif ((ranks[0],ranks[1]) or (ranks[1],ranks[0]) in ranks_string)
-    # and suits[0] == suits[1]:
-    # bonus_points += 70
-    # elif ((ranks[0],ranks[1]) or (ranks[1],ranks[0]) in ranks_string)
-    # and suits[0] != suits[1]:
-    # bonus_points += 50
-
+    elif (ranks[0], ranks[1]) in [("2", "3"), ("3", "4"), ("4", "5"), ("5", "6"), ("6", "7"), ("7", "8"), ("8", "9"), ("9", "10"), ("10", "J"), ("J", "Q"), ("Q", "K"), ("K", "A")] and suits[0] != suits[1]:
+        bonus_points += 50
+    elif (ranks[0], ranks[1]) in [("A", "K"), ("K", "Q"), ("Q", "J"), ("J", "10"), ("10", "9"), ("9", "8"), ("8", "7"), ("7", "6"), ("6", "5"), ("5", "4"), ("4", "3"), ("3", "2") ] and suits[0] != suits[1]:
+        bonus_points += 50
+    elif (ranks[0], ranks[1]) in [("2", "3"), ("3", "4"), ("4", "5"), ("5", "6"), ("6", "7"), ("7", "8"), ("8", "9"), ("9", "10"), ("10", "J"), ("J", "Q"), ("Q", "K"), ("K", "A")] and suits[0] == suits[1]:
+        bonus_points += 70
+    elif (ranks[0], ranks[1]) in [("A", "K"), ("K", "Q"), ("Q", "J"), ("J", "10"), ("10", "9"), ("9", "8"), ("8", "7"), ("7", "6"), ("6", "5"), ("5", "4"), ("4", "3"), ("3", "2") ] and suits[0] == suits[1]:
+        bonus_points += 70
     return bonus_points
 
 
