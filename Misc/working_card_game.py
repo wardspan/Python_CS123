@@ -79,38 +79,38 @@ def print_cards(player, cards):
     for card in cards:
         print(f"Rank: {card[0]}, Suit: {card[1]}")
 
+def main():
+    # Deal cards to players
+    player1_cards = deal_cards()
+    player2_cards = deal_cards()
 
-# Deal cards to players
-player1_cards = deal_cards()
-player2_cards = deal_cards()
+    # Calculate points for each player
+    player1_points = calculate_points(player1_cards)
+    player1_bonus = calculate_bonus_points(player1_cards)
+    player1_total = player1_points + player1_bonus
+    player2_points = calculate_points(player2_cards)
+    player2_bonus = calculate_bonus_points(player2_cards)
+    player2_total = player2_points + player2_bonus
 
+    # Print the cards for each player
+    print_cards(1, player1_cards)
+    print("Points:", player1_points)
+    print("Bonus points:", player1_bonus)
+    print("Total points:", player1_points + player1_bonus)
+    print()
+    print_cards(2, player2_cards)
+    print("Points:", player2_points)
+    print("Bonus points:", player2_bonus)
+    print("Total points:", player2_points + player2_bonus)
+    print()
 
-# Calculate points for each player
-player1_points = calculate_points(player1_cards)
-player1_bonus = calculate_bonus_points(player1_cards)
-player1_total = player1_points + player1_bonus
-player2_points = calculate_points(player2_cards)
-player2_bonus = calculate_bonus_points(player2_cards)
-player2_total = player2_points + player2_bonus
+    # Compare total points and announce the winner
+    if player1_total > player2_total:
+        print("Player 1 wins!")
+    elif player2_total > player1_total:
+        print("Player 2 wins!")
+    else:
+        print("It's a tie!")
 
-
-# Print the cards for each player
-print_cards(1, player1_cards)
-print("Points:", player1_points)
-print("Bonus points:", player1_bonus)
-print("Total points:", player1_points + player1_bonus)
-print()
-print_cards(2, player2_cards)
-print("Points:", player2_points)
-print("Bonus points:", player2_bonus)
-print("Total points:", player2_points + player2_bonus)
-print()
-
-
-# Compare total points and announce the winner
-if player1_total > player2_total:
-    print("Player 1 wins!")
-elif player2_total > player1_total:
-    print("Player 2 wins!")
-else:
-    print("It's a tie!")
+if __name__ == "__main__":
+    main()
