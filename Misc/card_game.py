@@ -1,8 +1,8 @@
-# Write a program which simulates the game of cards. The game that you create has two players and each one picks two cards.  
-# The players are awarded points for the cards using the rules given below. Calculate total points for each player and at 
-# the end print the cards rank and suit number for each player. Compare the total points of two players and announce the winner, 
-# the player with higher points. The points for a card equal the rank of the card unless it’s an Ace. For face cards the 
-# points are ace 20, king 13, queen 12 and the jack has 11 points. The additional points are awarded as: 
+# Write a program which simulates the game of cards. The game that you create has two players and each one picks two cards.
+# The players are awarded points for the cards using the rules given below. Calculate total points for each player and at
+# the end print the cards rank and suit number for each player. Compare the total points of two players and announce the winner,
+# the player with higher points. The points for a card equal the rank of the card unless it’s an Ace. For face cards the
+# points are ace 20, king 13, queen 12 and the jack has 11 points. The additional points are awarded as:
 # 1.	Two cards of same rank 100 points.
 # 2.	Two cards in a sequence and same suit 70 points.
 # 3.	Two cards in a sequence but different suit 50 points.
@@ -11,7 +11,7 @@ import random
 
 # Define the ranks and suits of the cards
 ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
-suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+suits = ['♠', '♥', '♦', '♣']
 values = {
     "2": 2,
     "3": 3,
