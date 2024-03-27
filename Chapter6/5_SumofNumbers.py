@@ -4,19 +4,23 @@
 
 # Open the file for reading
 file_path = '/Users/wardspan/Code/Python_CS123/Chapter6/numbers.txt'
-with open(file_path, 'r') as file:
+def main():
+    #file = open('numbers.txt', 'r')
+    with open(file_path, 'r') as file:
     # Read all the lines from the file
-    lines = file.readlines()
+        lines = file.readlines()
 
     # Initialize the total variable
     total = 0
 
     # Iterate over each line and convert the numbers to integers
     for line in lines:
-        # Remove any leading or trailing whitespace
+    # Remove any leading or trailing whitespace
         line = line.strip()
-        # Convert the line to an integer and add it to the total
+    # Convert the line to an integer and add it to the total
         total += int(line)
 
     # Print the total
     print("The total is:", total)
+
+main()
