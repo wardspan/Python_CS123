@@ -3,6 +3,8 @@
 # A Lo Shu Magic Square, is a grid with 3 rows and 3 columns that has the following properties:
 # - The grid contains the numbers 1 through 9 exactly.
 # - The sum of each row, each column, and each diagonal all add up to the same number.
+# There is only one Lo Shu Magic Square answer 4 9 2 3 5 7 8 1 6
+
 
 def is_loshu_magic_square(grid):
     # Check if the grid contains the numbers 1 through 9 exactly
