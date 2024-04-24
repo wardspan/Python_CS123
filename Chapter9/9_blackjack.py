@@ -40,29 +40,29 @@ def deal__player_cards(deck):
     
     while deck:
     # Deal a card to player 1
-    card = deck.pop()
-    player1_hand.append(card)
+        card = deck.pop()
+        player1_hand.append(card)
 
     # Deal a card to player 2
-    card = deck.pop()
-    player2_hand.append(card)
+        card = deck.pop()
+        player2_hand.append(card)
 
     # Calculate the total value of player 1's hand
-    player1_total = sum(card_values[card] for card in player1_hand)
+        player1_total = sum(card_values[card] for card in player1_hand)
 
     # Calculate the total value of player 2's hand
-    player2_total = sum(card_values[card] for card in player2_hand)
+        player2_total = sum(card_values[card] for card in player2_hand)
 
     # Check if any player's hand exceeds 21 points
-    if player1_total > 21 and player2_total > 21:
-        print("Both players' hands exceed 21 points. It's a draw!")
-        break
-    elif player1_total > 21:
-        print("Player 2 wins!")
-        break
-    elif player2_total > 21:
-        print("Player 1 wins!")
-        break
+        if player1_total > 21 and player2_total > 21:
+            print("Both players' hands exceed 21 points. It's a draw!")
+            break
+        elif player1_total > 21:
+            print("Player 2 wins!")
+            break
+        elif player2_total > 21:
+            print("Player 1 wins!")
+            break
 
 def main():
     deck = create_deck()
