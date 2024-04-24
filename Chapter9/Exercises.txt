@@ -1,0 +1,68 @@
+9.16 Are the elements of a set ordered or unordered?
+    No
+9.17 Does a set allow you to store duplicate elements? 
+    No
+9.18 How do you create an empty set?
+    set()
+9.19 After the following statement executes, what elements will be stored in the myset set?
+    myset = set('Jupiter')
+    {'r', 'p', 'u', 't', 'e', 'J', 'i'}
+9.20 After the following statement executes, what elements will be stored in the myset set?
+    myset = set(25)
+    TypeError: 'int' object is not iterable
+9.21 After the following statement executes, what elements will be stored in the myset set?
+    myset = set('www xxx yyy zzz') 
+    {'x', 'z', 'w', ' ', 'y'}
+9.22 After the following statement executes, what elements will be stored in the myset set?
+    myset = set([1, 2, 2, 3, 4, 4, 4])
+    {1, 2, 3, 4}
+9.23 After the following statement executes, what elements will be stored in the myset set?
+    myset = set(['www', 'xxx', 'yyy', 'zzz'])
+    {'xxx', 'www', 'yyy', 'zzz'}
+9.24 How do you determine the number of elements in a set?
+    len(set)
+9.25 After the following statement executes, what elements will be stored in the myset set?
+    myset = set([10, 9, 8])
+    myset.update([1, 2, 3])
+    {1, 2, 3, 8, 9, 10}
+9.26 After the following statement executes, what elements will be stored in the myset set?
+    myset = set([10, 9, 8])
+    myset.update('abc')
+    {8, 9, 10, 'a', 'b', 'c'}
+9.27 What is the difference between the remove and discard methods?
+    The remove method raises a KeyError exception if the specified element is not in the set,
+    whereas the discard method does not raise an exception.
+9.28 How can you determine whether a specific element exists in a set?
+    By using the in operator
+9.29 After the following code executes, what elements will be members of set3?
+    set1 = set([10, 20, 30])
+    set2 = set([100, 200, 300]) 
+    set3 = set1.union(set2)
+    {100, 200, 300, 10, 20, 30}
+9.30 After the following code executes, what elements will be members of set3?
+    set1 = set([1, 2, 3, 4])
+    set2 = set([3, 4, 5, 6])
+    set3 = set1.intersection(set2)
+    {3, 4}
+9.31 After the following code executes, what elements will be members of set3?
+    set1 = set([1, 2, 3, 4])
+    set2 = set([3, 4, 5, 6])
+    set3 = set1.difference(set2)
+    {1, 2}
+9.32 After the following code executes, what elements will be members of set3?
+    set1 = set([1, 2, 3, 4])
+    set2 = set([3, 4, 5, 6])
+    set3 = set2.difference(set1)
+    {5, 6}
+9.33 After the following code executes, what elements will be members of set3?
+    set1 = set(['a', 'b', 'c'])
+    set2 = set(['b', 'c', 'd'])
+    set3 = set1.symmetric_difference(set2)
+    {'a', 'd'}
+9.34 Look at the following code:
+    set1 = set([1, 2, 3, 4])
+    set2 = set([2, 3])
+    Which of the sets is a subset of the other?
+    set2 is a subset of set1 
+    Which of the sets is a superset of the other?
+    set1 is a superset of set2

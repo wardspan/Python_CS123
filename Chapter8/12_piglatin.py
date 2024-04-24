@@ -26,4 +26,5 @@ def main():
     print("Pig Latin:", pig_latin_sentence)
 
 if __name__ == "__main__":
+
     main()
