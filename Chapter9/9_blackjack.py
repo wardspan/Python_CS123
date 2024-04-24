@@ -1,16 +1,16 @@
-# Use card_dealer.py program to simulate a simplified version of the game of Blackjack between 
-# two virtual players. The cards have the following values:
-# Numeric cards are assigned the value they have printed on them. For example, 
-# the value of 2♠ is 2, and the value of the 5♦ is 5.
-# Jacks, queens, and kings are valued at 10.
-# Aces are valued at 1 or 11, depending on the player’s choice. 
-# The program should deal cards to each player until one player’s hand is worth more than 21 points. 
-# When that happens, the other player is the winner. (It is possible that both players’ hands 
-# will simultaneously exceed 21 points, in which case neither player wins.) The program 
-# should repeat until all the cards have been dealt from the deck.
-# If a player is dealt an ace, the program should decide the value of the card according to the following rule: 
-# The ace will be worth 11 points, unless that makes the player’s hand exceed 21 points. 
-# In that case, the ace will be worth 1 point.
+"""
+Use card_dealer.py program to simulate a simplified version of the game of Blackjack between two virtual players.
+The cards have the following values:
+- Numeric cards are assigned the value they have printed on them.
+- Jacks, queens, and kings are valued at 10.
+- Aces are valued at 1 or 11, depending on the player’s choice.
+The program should deal cards to each player until one player’s hand is worth more than 21 points.
+When that happens, the other player is the winner.
+(It is possible that both players’ hands will simultaneously exceed 21 points, in which case neither player wins.)
+The program should repeat until all the cards have been dealt from the deck.
+If a player is dealt an ace, the program should decide the value of the card according to the following rule:
+The ace will be worth 11 points, unless that makes the player’s hand exceed 21 points. In that case, the ace will be worth 1 point.
+"""
 
 import random
 
@@ -19,9 +19,9 @@ def create_deck():
     Create a deck of cards using a list.
     """
     deck = ['Ace of ♠', '2 of ♠', '3 of ♠', '4 of ♠', '5 of ♠', '6 of ♠', '7 of ♠', '8 of ♠', '9 of ♠', '10 of ♠', 'Jack of ♠', 'Queen of ♠', 'King of ♠',
-            'Ace of ♥', '2 of ♥', '3 of ♥', '4 of ♥', '5 of ♥', '6 of ♥', '7 of ♥', '8 of ♥', '9 of ♥', '10 of ♥', 'Jack of ♥', 'Queen of ♥', 'King of ♥',
-            'Ace of ♣', '2 of ♣', '3 of ♣', '4 of ♣', '5 of ♣', '6 of ♣', '7 of ♣', '8 of ♣', '9 of ♣', '10 of ♣', 'Jack of ♣', 'Queen of ♣', 'King of ♣',
-            'Ace of ♦', '2 of ♦', '3 of ♦', '4 of ♦', '5 of ♦', '6 of ♦', '7 of ♦', '8 of ♦', '9 of ♦', '10 of ♦', 'Jack of ♦', 'Queen of ♦', 'King of ♦']
+        'Ace of ♥', '2 of ♥', '3 of ♥', '4 of ♥', '5 of ♥', '6 of ♥', '7 of ♥', '8 of ♥', '9 of ♥', '10 of ♥', 'Jack of ♥', 'Queen of ♥', 'King of ♥',
+        'Ace of ♣', '2 of ♣', '3 of ♣', '4 of ♣', '5 of ♣', '6 of ♣', '7 of ♣', '8 of ♣', '9 of ♣', '10 of ♣', 'Jack of ♣', 'Queen of ♣', 'King of ♣',
+        'Ace of ♦', '2 of ♦', '3 of ♦', '4 of ♦', '5 of ♦', '6 of ♦', '7 of ♦', '8 of ♦', '9 of ♦', '10 of ♦', 'Jack of ♦', 'Queen of ♦', 'King of ♦']
     return deck
 
 def deal_card(deck):
